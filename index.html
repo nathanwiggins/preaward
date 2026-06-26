@@ -115,7 +115,6 @@
                 const reader = new FileReader();
                 reader.readAsDataURL(file);
                 reader.onload = () => {
-                    // Extract just the base64 string, removing the "data:application/pdf;base64," prefix
                     const base64String = reader.result.split(',')[1];
                     resolve(base64String);
                 };
